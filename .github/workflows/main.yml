@@ -58,6 +58,14 @@ jobs:
           adb devices
           adb -s emulator-5554 install CustomerApp-staging-11.7.6.apk
 
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+          
       - name: Run test cases
         run: |
-          ls ~/.m2
+          ls -lrth ~/.m2/repository
