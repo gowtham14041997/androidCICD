@@ -23,7 +23,7 @@ jobs:
         with:
           command: cp
           source: s3://rpk-mobileapp-apk/CustomerApp-staging-11.7.6.apk
-          destination: ./data/CustomerApp-staging-11.7.6.apk
+          destination: ./
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ap-south-1
@@ -58,4 +58,4 @@ jobs:
           adb devices
           adb connect 127.0.0.1:5555
           adb devices
-          ls -rtlh
+          adb -s 127.0.0.1:5555 install ./data/CustomerApp-staging-11.7.6.apk
