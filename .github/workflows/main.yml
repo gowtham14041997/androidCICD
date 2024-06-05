@@ -17,7 +17,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        
+
+      - uses: keithweaver/aws-s3-github-action@v1.0.0
+        name: cp apk
+        with:
+          command: cp
+          source: rpk-mobileapp-apk/CustomerApp-staging-11.7.6.apk
+          destination: ./data/CustomerApp-staging-11.7.6.apk
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ap-south-1
+          flags: --recursive
+          
       - name: Add avdmanager and sdkmanager to system PATH
         run: |
             echo "$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/${{ env.ANDROID_BUILD_TOOLS_VERSION }}" >> $GITHUB_PATH
