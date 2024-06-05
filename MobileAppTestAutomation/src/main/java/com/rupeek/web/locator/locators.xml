@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<pages>
+
+    <Common>
+        <linkedinIconAtBottom>//a[contains( @href , 'https://www.linkedin.com/company/rupeek?city')]</linkedinIconAtBottom>
+        <facebookIconAtBottom>//a[contains( @href , 'https://www.facebook.com/rupeek?city')]</facebookIconAtBottom>
+        <twitterIconAtBottom>//a[contains( @href , 'https://twitter.com/rupeekapp')]</twitterIconAtBottom>
+        <instagramIconAtBottom>//a[contains( @href , 'https://www.instagram.com')]</instagramIconAtBottom>
+
+    </Common>
+
+    <CmbHomePage>
+        <firstLeadBox>mobile</firstLeadBox>
+        <firstLeadPopUpBox>//section[contains(@class, 'popupWrapper')]//input[@id='mobile']</firstLeadPopUpBox>
+    </CmbHomePage>
+
+
+    <AppraiserHomePage>
+        <continueButton>com.android.permissioncontroller:id/continue_button</continueButton>
+        <okButton>android:id/button1</okButton>
+        <changeButton>com.rupeek.rupeek_agent_android.debug:id/change_url_button</changeButton>
+        <QAEnv>/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[1]</QAEnv>
+        <LoginButton>com.rupeek.rupeek_agent_android.debug:id/bottom_button_layout</LoginButton>
+        <PhoneNumber>com.rupeek.rupeek_agent_android.debug:id/edit_phone_no</PhoneNumber>
+        <AgentLogin>com.rupeek.rupeek_agent_android.debug:id/button_login</AgentLogin>
+        <AgentOtp>com.rupeek.rupeek_agent_android.debug:id/pin_view</AgentOtp>
+        <CancelWarning>android:id/button2</CancelWarning>
+        <FreshLoan>com.rupeek.rupeek_agent_android.debug:id/customer_name_tv</FreshLoan>
+        <Swipe>com.rupeek.rupeek_agent_android.debug:id/stu_img_thumb</Swipe>
+        <SwipeStart>com.rupeek.rupeek_agent_android.debug:id/stu_text_label</SwipeStart>
+        <CustomerOtp>com.rupeek.rupeek_agent_android.debug:id/verification_edit_text</CustomerOtp>
+        <Verify>com.rupeek.rupeek_agent_android.debug:id/verify_code_btn</Verify>
+        <ContinueToBank>com.rupeek.rupeek_agent_android.debug:id/verify_bank_details</ContinueToBank>
+        <VerificationSuccess>com.rupeek.rupeek_agent_android.debug:id/verif_text_1</VerificationSuccess>
+        <GrossWeight>com.rupeek.rupeek_agent_android.debug:id/action_add</GrossWeight>
+        <CaptureImage>com.rupeek.rupeek_agent_android.debug:id/photoView</CaptureImage>
+        <EditWeight>com.rupeek.rupeek_agent_android.debug:id/gross_weight_edit_text</EditWeight>
+        <SubmitWeight>com.rupeek.rupeek_agent_android.debug:id/next_activity_btn_text</SubmitWeight>
+        <GrossWeightTitle>com.rupeek.rupeek_agent_android.debug:id/toolbar_title</GrossWeightTitle>
+        <VisibleWeight>com.rupeek.rupeek_agent_android.debug:id/gross_weight_textview</VisibleWeight>
+        <CaptureImageButton>com.rupeek.rupeek_agent_android.debug:id/captureImageButton</CaptureImageButton>
+        <ConfirmButton>com.rupeek.rupeek_agent_android.debug:id/confirm_btn</ConfirmButton>
+        <SubmitWeights>android:id/button1</SubmitWeights>
+        <CardView>androidx.cardview.widget.CardView</CardView>
+        <CleanTouchStoneYes>com.rupeek.rupeek_agent_android.debug:id/radio_yes</CleanTouchStoneYes>
+        <TouchStoneQuestion>com.rupeek.rupeek_agent_android.debug:id/tv_title</TouchStoneQuestion>
+        <SubmitTouchStone>com.rupeek.rupeek_agent_android.debug:id/next_activity_btn_text</SubmitTouchStone>
+        <ImageUploaded>com.rupeek.rupeek_agent_android.debug:id/progress_done</ImageUploaded>
+        <ApproxLoanEligibility>com.rupeek.rupeek_agent_android.debug:id/appraisal_worth_tv</ApproxLoanEligibility>
+        <AddJewelTesxt>com.rupeek.rupeek_agent_android.debug:id/note_tv</AddJewelTesxt>
+        <AddJewelIcon>com.rupeek.rupeek_agent_android.debug:id/add_jewel_btn</AddJewelIcon>
+        <CaptureWeighScale>com.rupeek.rupeek_agent_android.debug:id/capture_ib</CaptureWeighScale>
+        <SubmitWeigh>com.rupeek.rupeek_agent_android.debug:id/submit_btn</SubmitWeigh>
+        <ConfirmLoanAmount>com.rupeek.rupeek_agent_android.debug:id/confirm_btn</ConfirmLoanAmount>
+        <AddLoanParcel>com.rupeek.rupeek_agent_android.debug:id/add_loan_parcel_btn</AddLoanParcel>
+        <Scheme>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.GridView/android.view.ViewGroup[2]/android.widget.TextView[2]</Scheme>
+        <SelectScheme>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout</SelectScheme>
+        <OkButton>com.rupeek.rupeek_agent_android.debug:id/dismiss_button</OkButton>
+        <Notification>com.rupeek.rupeek_agent_android.debug:id/notification_id</Notification>
+        <NotificationBar>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout</NotificationBar>
+        <SelectJewel>com.rupeek.rupeek_agent_android.debug:id/jewel_type_tv</SelectJewel>
+        <Kadaga>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.TextView</Kadaga>
+        <JewelsType>android.widget.TextView</JewelsType>
+        <Purity>com.rupeek.rupeek_agent_android.debug:id/purity_22</Purity>
+        <Quantity>com.rupeek.rupeek_agent_android.debug:id/quantity_single</Quantity>
+        <Gross>//*[@text='Gross Weight (gms)' and @class='android.widget.EditText']</Gross>
+        <StoneAdjust>//*[@text='0' and @class='android.widget.EditText']</StoneAdjust>
+        <StoneAdjustment>//*[@text='Stone Adjustment' and @class='android.widget.EditText']</StoneAdjustment>
+        <AdjustmentComment>//*[@text='Adjustment Comments' and @class='android.widget.EditText']</AdjustmentComment>
+        <Hallmark>com.rupeek.rupeek_agent_android.debug:id/hallmark_cb</Hallmark>
+        <EditButton>com.rupeek.rupeek_agent_android.debug:id/edit_btn</EditButton>
+        <ApprisalComplete>com.rupeek.rupeek_agent_android.debug:id/dialog_message_tv</ApprisalComplete>
+        <ApprisalOk>com.rupeek.rupeek_agent_android.debug:id/positive_btn</ApprisalOk>
+        <BankDetailsText>//*[@class='android.widget.TextView'and @text='Bank Details']</BankDetailsText>
+        <CrossCheckMessage>//*[@class='android.widget.TextView'and @text='Cross check the bank account details with the cancelled cheque from the customer']</CrossCheckMessage>
+        <TakePicture>//*[@class='android.widget.TextView'and @text='Take Picture']</TakePicture>
+        <UploadFromGallery>//*[@class='android.widget.TextView'and @text='Upload from Gallery']</UploadFromGallery>
+        <CheckBookOptions>//*[@resource-id='android:id/text1']</CheckBookOptions>
+        <BankDetailsText>//*[@class='android.widget.TextView' and @text='Bank Account Details']</BankDetailsText>
+        <AccountNumber>//*[@class='android.widget.EditText'and @text='Bank Account No']</AccountNumber>
+        <ReEnterAccountNumber>//*[@class='android.widget.EditText'and @text='Re-Enter Bank Account No']</ReEnterAccountNumber>
+        <BankName>//*[@class='android.widget.EditText'and @text='Bank Name']</BankName>
+        <IFSCCode>//*[@class='android.widget.EditText'and @text='IFSC Code']</IFSCCode>
+        <BenificiaryName>//*[@class='android.widget.EditText'and @text='Beneficiary Name']</BenificiaryName>
+        <SubmitBankDetails>com.rupeek.rupeek_agent_android.debug:id/submit_bank_details</SubmitBankDetails>
+        <selectKycDocumentText>//*[@class='android.widget.TextView'and @text='Select KYC Document']</selectKycDocumentText>
+        <AddressProof>//*[@class='android.widget.AutoCompleteTextView' and @text='Select Address Proof']</AddressProof>
+        <CurrentAddress>com.rupeek.rupeek_agent_android.debug:id/current_add_cb</CurrentAddress>
+        <IDproof>//*[@class='android.widget.AutoCompleteTextView' and @text='Select ID Proof']</IDproof>
+        <Localaddressproof>//*[@class='android.widget.AutoCompleteTextView' and @text='Select Local Address Proof']</Localaddressproof>
+        <Occupation>//*[@class='android.widget.AutoCompleteTextView' and @text='Select Occupation Type']</Occupation>
+        <OccupationDetails>//*[@class='android.widget.EditText'and @text='Enter Details']</OccupationDetails>
+        <FatherName>//*[contains(@text,'Enter Father')]</FatherName>
+        <MotherName>//*[contains(@text,'Enter Mother')]</MotherName>
+        <EmailId>//*[@class='android.widget.EditText'and @text='Enter Email Id']</EmailId>
+        <Domain>//*[@class='android.widget.AutoCompleteTextView'and @text='Select Domain']</Domain>
+        <AddNominee>com.rupeek.rupeek_agent_android.debug:id/add_nominee_btn</AddNominee>
+        <NomineeDetailsText>//*[@class='android.widget.TextView'and @text='Nominee Details']</NomineeDetailsText>
+        <NomineeName>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText</NomineeName>
+        <DOB>(//android.widget.ImageButton[@content-desc="Show dropdown menu"])[1]</DOB>
+        <Date>//android.view.View[@content-desc="01 September 2023"]</Date>
+        <Relation>com.rupeek.rupeek_agent_android.debug:id/dropdown_auto_complete_tv</Relation>
+        <ContactNumber>//*[@class='android.widget.EditText' and @text='Contact Number']</ContactNumber>
+        <Pincode>//*[@class='android.widget.EditText' and @text='Pin Code']</Pincode>
+        <Country>//*[@class='android.widget.EditText' and @text='Country']</Country>
+        <State>//*[@class='android.widget.EditText' and @text='State']</State>
+        <City>//*[@class='android.widget.EditText' and @text='City']</City>
+        <CommutingAddress>//*[@class='android.widget.EditText' and @text='Communication Address']</CommutingAddress>
+        <AddPhoto>com.rupeek.rupeek_agent_android.debug:id/addPhoto_btn</AddPhoto>
+        <ContinuetoKyc>com.rupeek.rupeek_agent_android.debug:id/continue_btn</ContinuetoKyc>
+        <CustomerPhotoPage>//*[@class='android.widget.TextView' and @text='Customer Photo']</CustomerPhotoPage>
+        <AadhaarCardFront>//*[@class='android.widget.TextView' and @text='Aadhaar Card (Front Side)']</AadhaarCardFront>
+        <AadhaarCardBack>//*[@class='android.widget.TextView' and @text='Aadhaar Card (Back Side)']</AadhaarCardBack>
+        <PanCardFront>//*[@class='android.widget.TextView' and @text='Pan Card (Front Side)']</PanCardFront>
+        <PanCardBack>//*[@class='android.widget.TextView' and @text='Pan Card (Back Side)']</PanCardBack>
+        <AadhaarNumberPage>//*[@class='android.widget.TextView' and @text='Aadhaar number']</AadhaarNumberPage>
+        <PanNumberPage>//*[@class='android.widget.TextView' and @text='Pan number']</PanNumberPage>
+        <AadhaarNumber>//*[@class='android.widget.EditText' and @text='Document Number']</AadhaarNumber>
+        <CustomerSign>//*[@class='android.widget.TextView' and @text='Customer Signature']</CustomerSign>
+        <DocumentNumber>com.rupeek.rupeek_agent_android.debug:id/text_input_et</DocumentNumber>
+        <GoldEligibilityText>com.rupeek.rupeek_agent_android.debug:id/gold_loan_string_tv</GoldEligibilityText>
+        <EligibleLoanAmount>com.rupeek.rupeek_agent_android.debug:id/loan_request_worth_edit_text</EligibleLoanAmount>
+        <NumberOfPledge>com.rupeek.rupeek_agent_android.debug:id/no_of_pledge_card_textview</NumberOfPledge>
+        <InsuranceText>com.rupeek.rupeek_agent_android.debug:id/insurance_lable_tv</InsuranceText>
+        <JewelType>com.rupeek.rupeek_agent_android.debug:id/jewel_type_textview</JewelType>
+        <JewelQuantity>com.rupeek.rupeek_agent_android.debug:id/no_of_jewels_textview</JewelQuantity>
+        <JewelWeight>com.rupeek.rupeek_agent_android.debug:id/jewel_weight_tv</JewelWeight>
+        <AddLoanParcel>com.rupeek.rupeek_agent_android.debug:id/add_loan_parcel_btn</AddLoanParcel>
+        <SelectSchemeText>//*[@class='android.widget.TextView' and @text='SELECT PLEDGE SCHEME']</SelectSchemeText>
+        <PledgeLoanAmount>//*[@resource-id='com.rupeek.rupeek_agent_android.debug:id/pledge_loan_amount_tv']</PledgeLoanAmount>
+        <TotalLoanAmount>om.rupeek.rupeek_agent_android.debug:id/total_loan_amount_tv</TotalLoanAmount>
+        <ScanFingerPrint>com.rupeek.rupeek_agent_android.debug:id/scan_fingerprint_ekyc_btn</ScanFingerPrint>
+        <ProceedMessage>com.rupeek.rupeek_agent_android.debug:id/retry_text_tv</ProceedMessage>
+        <FingerPrintConfirm>com.rupeek.rupeek_agent_android.debug:id/kyc_status_tv</FingerPrintConfirm>
+        <SubmitKyc>com.rupeek.rupeek_agent_android.debug:id/submit_ekyc_btn</SubmitKyc>
+        <LoanAmount>com.rupeek.rupeek_agent_android.debug:id/loan_request_worth_edit_text</LoanAmount>
+        <SchemeClick>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.GridView/android.view.ViewGroup[2]/android.widget.TextView[1]</SchemeClick>
+        <SearchBox>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.GridView/android.view.ViewGroup[1]/android.widget.TextView[2]</SearchBox>
+        <SelectScheme>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.GridView/android.view.ViewGroup[5]/android.widget.TextView[2]</SelectScheme>
+        <AddParcel>com.rupeek.rupeek_agent_android.debug:id/action_plus</AddParcel>
+        <RegisterPacket>com.rupeek.rupeek_agent_android.debug:id/smart_dna_scanner_btn</RegisterPacket>
+        <SmartDNAMessage>android:id/message</SmartDNAMessage>
+        <AssetCode>com.rupeek.mjolnir:id/code</AssetCode>
+        <send>com.rupeek.mjolnir:id/send</send>
+        <SubmitPacket>com.rupeek.rupeek_agent_android.debug:id/next_activity_layout</SubmitPacket>
+        <ActionDone>com.rupeek.rupeek_agent_android.debug:id/action_done</ActionDone>
+        <AlertYes>com.rupeek.rupeek_agent_android.debug:id/alert_yes_tv</AlertYes>
+        <ApprisalForm>com.rupeek.rupeek_agent_android.debug:id/afi_tv</ApprisalForm>
+        <CashBackForm>//*[@class='android.widget.TextView'and @text='Cashback Form']</CashBackForm>
+        <VerifySchemeOtp>com.rupeek.rupeek_agent_android.debug:id/verify_code_btn</VerifySchemeOtp>
+        <JewelleryApproval>//*[@class='android.widget.TextView' and @text='Jewellery Appraisal Pending']</JewelleryApproval>
+        <KycApproval>//*[@class='android.widget.TextView' and @text='KYC Approval Pending']</KycApproval>
+        <CustomerAddress>com.rupeek.rupeek_agent_android.debug:id/intro1_tv</CustomerAddress>
+        <ConfirmAddressQuestion>com.rupeek.rupeek_agent_android.debug:id/intro2_tv</ConfirmAddressQuestion>
+        <ConfirmYes>com.rupeek.rupeek_agent_android.debug:id/yes_btn</ConfirmYes>
+        <LoanParcels>com.rupeek.rupeek_agent_android.debug:id/add_loan_parcel_btn</LoanParcels>
+        <WaitMessage>com.rupeek.rupeek_agent_android.debug:id/snackbar_text</WaitMessage>
+        <PledgeCard>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[1]/android.widget.RelativeLayout/android.widget.ImageView</PledgeCard>
+        <KFS>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.ImageView</KFS>
+        <UnsecuredKFS>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.ImageView</UnsecuredKFS>
+        <SummaryPledgeCard>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.ImageView</SummaryPledgeCard>
+        <ApproveMoneyTransfer>com.rupeek.rupeek_agent_android.debug:id/upload_serial_no_btn</ApproveMoneyTransfer>
+        <Caret>com.rupeek.rupeek_agent_android.debug:id/purity_18</Caret>
+        <Qualification>//*[@class='android.widget.AutoCompleteTextView' and @text='Select Qualification']</Qualification>
+        <MaritalStatus>//*[@class='android.widget.AutoCompleteTextView' and @text='Select Marital Status']</MaritalStatus>
+        <MonthlyIncome>//*[@class='android.widget.EditText'and @text='Enter Monthly Income']</MonthlyIncome>
+        <ADDDocument>com.rupeek.rupeek_agent_android.debug:id/add_doc_btn</ADDDocument>
+        <Passport>com.rupeek.rupeek_agent_android.debug:id/passport_rb</Passport>
+        <VoterId>com.rupeek.rupeek_agent_android.debug:id/voter_id_rb</VoterId>
+        <DocumentContinue>com.rupeek.rupeek_agent_android.debug:id/dialog_continue_btn</DocumentContinue>
+        <InputError>com.rupeek.rupeek_agent_android.debug:id/textinput_error</InputError>
+        <DocumentTextBox>com.rupeek.rupeek_agent_android.debug:id/text_input_et</DocumentTextBox>
+
+
+    </AppraiserHomePage>
+    <LoanAdmin>
+        <AdminUserName>//input[@type='text']</AdminUserName>
+        <AdminPassword>//input[@type='password']</AdminPassword>
+        <Submit>//button[@type='submit']</Submit>
+        <KYCTab>//span[@class='cursor-pointer'][1]</KYCTab>
+        <AppraisalTab>(//span[@class='cursor-pointer'])[2]</AppraisalTab>
+        <AgentNames>//div[@class='notification-details pl-0']</AgentNames>
+        <CustomerName>//label[@for='customerproofname']</CustomerName>
+        <EnterCustomerName>customerproofname</EnterCustomerName>
+        <ReEnterName>reEnterName</ReEnterName>
+        <ReEnterDob>reenter-dob</ReEnterDob>
+        <Dob>//input[@id='dob']</Dob>
+        <City>city</City>
+        <houseno>houseno</houseno>
+        <street>street</street>
+        <locality>locality</locality>
+        <HinduReligion>religion-Hindu</HinduReligion>
+        <state>state</state>
+        <pincode>pincode</pincode>
+        <income>income</income>
+        <Approve>updateCustomer</Approve>
+        <ApproveAllUnSelect>//button[normalize-space()='Approve All Unselected']</ApproveAllUnSelect>
+        <NBFC>//span[normalize-space()='NBFC']</NBFC>
+        <Submit>//button[@type='submit']</Submit>
+        <PaymentTab>(//span[@class='cursor-pointer'])[3]</PaymentTab>
+        <SummaryTab>//span[normalize-space()='Summary']</SummaryTab>
+        <Mode>//select[@class='form-control mode']</Mode>
+        <UTR>//input[@placeholder='Cash']</UTR>
+        <Amount>//input[@placeholder='0']</Amount>
+        <Comment>//input[@class='form-control comments']</Comment>
+        <FundTransfer>//button[text()='Proceed without Fund Transfer']</FundTransfer>
+        <CustomerName>com.rupeek.rupeek_agent_android.debug:id/customer_name_tv</CustomerName>
+        <CustomerAddress>com.rupeek.rupeek_agent_android.debug:id/customer_addr_tv</CustomerAddress>
+        <LenderBranch>com.rupeek.rupeek_agent_android.debug:id/lending_branch_tv</LenderBranch>
+        <ETA>com.rupeek.rupeek_agent_android.debug:id/etaetd_tv</ETA>
+        <NameView>com.rupeek.rupeek_agent_android.debug:id/name_textview</NameView>
+        <FullAddress>com.rupeek.rupeek_agent_android.debug:id/full_address_textview</FullAddress>
+        <TakeoverDoc>//span[text()='Takeover Documents']</TakeoverDoc>
+        <TODocuments>//h5[@class='thick-label-blue text-uppercase my-4 fnt-20']</TODocuments>
+
+
+    </LoanAdmin>
+    <AppraiserTO>
+        <Documents>android.widget.RelativeLayout</Documents>
+        <Agreement>com.rupeek.rupeek_agent_android.debug:id/big_picture_layout</Agreement>
+        <Cheque>com.rupeek.rupeek_agent_android.debug:id/cheque_rl</Cheque>
+        <SwipeMessage>com.rupeek.rupeek_agent_android.debug:id/tv_header</SwipeMessage>
+        <StartToBranch>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView</StartToBranch>
+        <ToCollectQuestion>com.rupeek.rupeek_agent_android.debug:id/intro_tv</ToCollectQuestion>
+        <YesButton>com.rupeek.rupeek_agent_android.debug:id/yes_radio_btn</YesButton>
+        <RegisterMessage>com.rupeek.rupeek_agent_android.debug:id/textview</RegisterMessage>
+        <PacketCount>com.rupeek.rupeek_agent_android.debug:id/packet_no_textview</PacketCount>
+        <TOReceipt>com.rupeek.rupeek_agent_android.debug:id/cheque_tv</TOReceipt>
+        <TickImage>com.rupeek.rupeek_agent_android.debug:id/receipts_tick_image</TickImage>
+        <CustomerPlaceMessage>//*[@text='Are you doing appraisal in customer’s place (skip temp pledge card) ?']</CustomerPlaceMessage>
+        <PacketCounts>//*[@text='Packet Number']</PacketCounts>
+        <PacketNumber>com.rupeek.rupeek_agent_android.debug:id/packet_number</PacketNumber>
+        <JewelAddButton>com.rupeek.rupeek_agent_android.debug:id/add_jewel_packet_button</JewelAddButton>
+        <ExcessFunding>com.rupeek.rupeek_agent_android.debug:id/excess_amount_tv</ExcessFunding>
+        <NoButton>com.rupeek.rupeek_agent_android.debug:id/radio_no</NoButton>
+        <QRCodeScan>com.rupeek.mjolnir:id/qr_code_label</QRCodeScan>
+        <ESign>//*[@text='ESign Flow' and @class='android.widget.TextView']</ESign>
+        <ESignHeader>com.rupeek.rupeek_agent_android.debug:id/esign_header</ESignHeader>
+        <ESignSteps>com.rupeek.rupeek_agent_android.debug:id/esign_steps</ESignSteps>
+        <EsignImage>//*[@class='android.widget.ImageView']</EsignImage>
+        <EsignStart>com.rupeek.rupeek_agent_android.debug:id/preview_button_lyt</EsignStart>
+        <ResendSMS>//*[@class='android.widget.Button' and @text='RESEND SMS']</ResendSMS>
+        <DescriptionMessage>com.rupeek.rupeek_agent_android.debug:id/description</DescriptionMessage>
+        <ProceedButton>com.rupeek.rupeek_agent_android.debug:id/popup_btn</ProceedButton>
+        <ESIGNContinue>com.rupeek.rupeek_agent_android.debug:id/popup_btn</ESIGNContinue>
+        <House>(//*[@class='android.widget.EditText'])[1]</House>
+        <Street>(//*[@class='android.widget.EditText'])[2]</Street>
+        <Locality>(//*[@class='android.widget.EditText'])[3]</Locality>
+        <City>(//*[@class='android.widget.EditText'])[4]</City>
+        <State>(//*[@class='android.widget.EditText'])[5]</State>
+        <Pincode>(//*[@class='android.widget.EditText'])[4]</Pincode>
+        <OccupationDetail>com.rupeek.rupeek_agent_android.debug:id/text_input_et</OccupationDetail>
+        <BRECheck>com.rupeek.rupeek_agent_android.debug:id/bre_checkbox</BRECheck>
+
+
+    </AppraiserTO>
+
+    <AppraiserAppGold>
+        <InsuranceCheck>com.rupeek.rupeek_agent_android.debug:id/dialog_title_tv</InsuranceCheck>
+        <Yes>com.rupeek.rupeek_agent_android.debug:id/positive_btn</Yes>
+        <CreditCardForm>com.rupeek.rupeek_agent_android.debug:id/cc_application_form_ll</CreditCardForm>
+        <CreditCardDetails>com.rupeek.rupeek_agent_android.debug:id/cc_detail_ll</CreditCardDetails>
+        <EmailField>com.rupeek.rupeek_agent_android.debug:id/email_field</EmailField>
+        <Name>com.rupeek.rupeek_agent_android.debug:id/name_field</Name>
+        <HouseNo>com.rupeek.rupeek_agent_android.debug:id/shipping_address_house_no_field</HouseNo>
+        <StreetName>com.rupeek.rupeek_agent_android.debug:id/shipping_address_street_field</StreetName>
+        <Locality>com.rupeek.rupeek_agent_android.debug:id/shipping_address_locality_field</Locality>
+        <City>com.rupeek.rupeek_agent_android.debug:id/shipping_address_city_field</City>
+        <State>com.rupeek.rupeek_agent_android.debug:id/shipping_address_state_field</State>
+        <Pincode>com.rupeek.rupeek_agent_android.debug:id/shipping_address_pincode_field</Pincode>
+        <SendOtp>com.rupeek.rupeek_agent_android.debug:id/send_button</SendOtp>
+        <OtpField>com.rupeek.rupeek_agent_android.debug:id/otp_field</OtpField>
+        <VerifyOtp>com.rupeek.rupeek_agent_android.debug:id/otp_submit_button</VerifyOtp>
+
+    </AppraiserAppGold>
+
+
+
+
+    <customerApp>
+        <envSelectDropDown>com.rupeek.customer.debug:id/flavorSp</envSelectDropDown>
+        <envDropDownList>/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView</envDropDownList>
+        <defaultButton>com.rupeek.customer.debug:id/gravityButtonContainerTextDrawable</defaultButton>
+        <acceptTnCButton>com.rupeek.customer.debug:id/acceptAllButton</acceptTnCButton>
+        <entryTextBox>com.rupeek.customer.debug:id/editText</entryTextBox>
+        <resendOTP>com.rupeek.customer.debug:id/resend</resendOTP>
+        <goldGramText>com.rupeek.customer.debug:id/highest_per_gram_tv</goldGramText>
+        <todaysGoldValue>com.rupeek.customer.debug:id/today_gold_rate_tv</todaysGoldValue>
+        <bankBranch3KmText>com.rupeek.customer.debug:id/heading1</bankBranch3KmText>
+        <hamburger>Navigate up</hamburger>
+        <atDoorStep>com.rupeek.customer.debug:id/getNewGoldLoadHeadingTV</atDoorStep>
+        <atBankBranch>com.rupeek.customer.debug:id/shiftGoldLoanIV</atBankBranch>
+        <enterOtpManually>
+            /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout[3]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
+        </enterOtpManually>
+        <selectCityWhileSignUp>com.rupeek.customer.debug:id/selectCityTV</selectCityWhileSignUp>
+        <enterCityWhileSignUp>com.rupeek.customer.debug:id/city_search_view</enterCityWhileSignUp>
+        <releasePage>Choose a Loan to make payment</releasePage>
+        <partPaymentPage>Choose a Loan to Pay</partPaymentPage>
+        <payInterestPage>Choose a Loan to Pay Interest</payInterestPage>
+        <renewLoanPage>Choose a Loan to Renew</renewLoanPage>
+        <closeLoanPage>Choose a Loan to Close</closeLoanPage>
+        <activeLoans>Active Loans</activeLoans>
+        <inProgressLoans>In Progress</inProgressLoans>
+        <currentLoanCb>com.rupeek.customer.debug:id/currentLoanCb</currentLoanCb>
+        <proceedButton>com.rupeek.customer.debug:id/proceedBtn</proceedButton>
+        <selectRenewalScheme>com.rupeek.customer.debug:id/schemeCardBottom</selectRenewalScheme>
+        <proceedESign>//android.widget.Button[@text='Proceed']</proceedESign>
+        <myLoans>com.rupeek.customer.debug:id/toolbar_title</myLoans>
+        <paymentsHistory>Payments History</paymentsHistory>
+        <popup>com.rupeek.customer.debug:id/ivCloseIcon</popup>
+        <popUpPartRelease>com.rupeek.customer.debug:id/closeBtn</popUpPartRelease>
+        <partRelease>Choose Gold for Part Release</partRelease>
+        <checkBox>android.widget.CheckBox</checkBox>
+        <continueButton>com.rupeek.customer.debug:id/continueBtn</continueButton>
+        <payInterest>(//android.widget.TextView[@resource-id='com.rupeek.customer.debug:id/lenderOptionsTv'])[1]</payInterest>
+        <closeLoan>(//android.widget.TextView[@resource-id='com.rupeek.customer.debug:id/lenderOptionsTv'])[2]</closeLoan>
+        <renewLoan>(//android.widget.TextView[@resource-id='com.rupeek.customer.debug:id/lenderOptionsTv'])[3]</renewLoan>
+        <partPayment>(//android.widget.TextView[@resource-id='com.rupeek.customer.debug:id/lenderOptionsTv'])[4]</partPayment>
+        <continuePayButton>com.rupeek.customer.debug:id/continuePayBtn</continuePayButton>
+        <knowMore>com.rupeek.customer.debug:id/knowMoreTv</knowMore>
+        <paymentAmount>com.rupeek.customer.debug:id/partPaymentAmountEt</paymentAmount>
+        <viewGold>com.rupeek.customer.debug:id/viewGoldTv</viewGold>
+        <goldForNewLoan>com.rupeek.customer.debug:id/tvViewNewGold</goldForNewLoan>
+        <closeGoldButton>com.rupeek.customer.debug:id/closeBtn</closeGoldButton>
+        <termsConditions>com.rupeek.customer.debug:id/acceptTermsAndConditionsCb</termsConditions>
+        <payForRelease>//android.widget.TextView[contains(@text,"Pay ")]</payForRelease>
+        <selectedCb>com.rupeek.customer.debug:id/selectedCb</selectedCb>
+        <payAmountButton>com.rupeek.customer.debug:id/gravityButtonPrimaryText</payAmountButton>
+        <loans>com.rupeek.customer.debug:id/lender_tv</loans>
+        <pendingActions>com.rupeek.customer.debug:id/pendingActionTitleTv</pendingActions>
+        <pledge>com.rupeek.customer.debug:id/pledged_loan_root</pledge>
+        <netBanking>//android.view.View[@text="Netbanking ..."]</netBanking>
+        <continueToPay>//android.widget.TextView[@text="Continue To Pay"]</continueToPay>
+        <payNow>//android.widget.Button[@text="Pay Now"]</payNow>
+        <bank>//android.view.View[@resource-id="bank-item-UTIB"]</bank>
+        <success>//android.widget.Button[@text="Success"]</success>
+        <failure>//android.widget.Button[@text="Failure"]</failure>
+        <payInterestBtn>com.rupeek.customer.debug:id/payInterestBtn</payInterestBtn>
+        <paymentMethod>com.rupeek.customer.debug:id/paymentOptionsCv</paymentMethod>
+        <back>android.widget.ImageButton</back>
+        <paymentArrow>com.rupeek.customer.debug:id/payment_arrow_iv</paymentArrow>
+        <applyLater>com.rupeek.customer.debug:id/applyLaterTV</applyLater>
+        <bangaloreCitySelectorxpath>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]</bangaloreCitySelectorxpath>
+        <ahmedabadCitySelectorXpath>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]</ahmedabadCitySelectorXpath>
+        <delhiCitySelectorXpath>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]</delhiCitySelectorXpath>
+        <newHomeScreen>com.rupeek.customer.debug:id/homeLayout</newHomeScreen>
+        <hamburgerOnNewHomeScreen>android.widget.Button</hamburgerOnNewHomeScreen>
+        <currentLoanDetailHeading>com.rupeek.customer.debug:id/title</currentLoanDetailHeading>
+        <rupeeksEasy4StepProcess>//android.view.View[@content-desc="Rupeek's Easy 4 Step Process"]</rupeeksEasy4StepProcess>
+        <articles>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]</articles>
+        <referAndEarn>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View</referAndEarn>
+        <friendsName>//android.view.View[@content-desc="Enter your Friend's Name
+            Enter your Friend's Phone Number"]/android.widget.EditText[1]</friendsName>
+        <friendsPhone>//android.view.View[@content-desc="Enter your Friend's Name
+            Enter your Friend's Phone Number"]/android.widget.EditText[2]</friendsPhone>
+        <shiftgoldLoanCVContainer>com.rupeek.customer.debug:id/shiftGoldLoanCVContainer</shiftgoldLoanCVContainer>
+        <applyNowBtn>com.rupeek.customer.debug:id/applyNowBtn</applyNowBtn>
+        <currentLoanAmount>//android.widget.EditText[@index='1']</currentLoanAmount>
+        <currentMonthlyInterestRate>//android.widget.EditText[@index='0']</currentMonthlyInterestRate>
+        <currentMonthlyInterestRateOptions>com.rupeek.customer.debug:id/title_existing_lender</currentMonthlyInterestRateOptions>
+        <muthoot>com.rupeek.customer.debug:id/select_muthoot</muthoot>
+        <manappuram>com.rupeek.customer.debug:id/select_manappuram</manappuram>
+        <banks>com.rupeek.customer.debug:id/select_banks</banks>
+        <others>com.rupeek.customer.debug:id/select_others</others>
+        <bankBranch>com.rupeek.customer.debug:id/bankBranchSubText</bankBranch>
+        <date>(//android.view.ViewGroup[@resource-id='com.rupeek.customer.debug:id/parentCl'])[last()]</date>
+        <time>com.rupeek.customer.debug:id/timeTv</time>
+        <searchLocation>com.rupeek.customer.debug:id/searchView</searchLocation>
+        <prediction>com.rupeek.customer.debug:id/prediction</prediction>
+        <address>android.widget.RadioButton</address>
+        <addNewAddress>com.rupeek.customer.debug:id/addNewTv</addNewAddress>
+        <pinCode>//android.widget.EditText[@text="Enter your address pincode"]</pinCode>
+        <houseNo>//android.widget.EditText[@text="Enter your house no. / flat no."]</houseNo>
+        <completeAddress>//android.widget.EditText[@text="Enter your complete address"]</completeAddress>
+        <landMark>//android.widget.EditText[@text="Enter nearby landmark"]</landMark>
+        <doorStep>com.rupeek.customer.debug:id/doorstepSubText</doorStep>
+        <uploadLoanReceiptBanner>com.rupeek.customer.debug:id/upload_loan_receipt_banner</uploadLoanReceiptBanner>
+        <skipUploadLoanReceipt>com.rupeek.customer.debug:id/skip_upload_loan_receipts</skipUploadLoanReceipt>
+        <requestSuccessfulMessage>com.rupeek.customer.debug:id/title</requestSuccessfulMessage>
+        <loanAmountInputWebView>loanAmountInput</loanAmountInputWebView>
+        <viewSchemesButtonWebView>//android.widget.Button[@index='0']</viewSchemesButtonWebView>
+        <loanAmountInputNativeView>com.rupeek.customer.debug:id/input_loan_amount</loanAmountInputNativeView>
+        <proceedNativeView>com.rupeek.customer.debug:id/proceed</proceedNativeView>
+        <pinCodeNativeView>com.rupeek.customer.debug:id/input_pincode</pinCodeNativeView>
+        <continueButtonNativeView>com.rupeek.customer.debug:id/action_continue</continueButtonNativeView>
+        <doorstepNativeView>com.rupeek.customer.debug:id/service_mode_doorstep_layout</doorstepNativeView>
+        <addAddress>com.rupeek.customer.debug:id/add_address</addAddress>
+        <searchNativeView>com.rupeek.customer.debug:id/search_view</searchNativeView>
+        <BengaluruAddress>//android.widget.TextView[@text="Bengaluru, Karnataka 560001, India"]</BengaluruAddress>
+        <confirmAddress>com.rupeek.customer.debug:id/confirm_address_selection</confirmAddress>
+        <houseNumber>com.rupeek.customer.debug:id/input_house_no</houseNumber>
+        <loanDates>//android.widget.LinearLayout[@index='1']</loanDates>
+        <selectTimeSlot>com.rupeek.customer.debug:id/slot</selectTimeSlot>
+        <slotTime>//android.widget.TextView[@index='6']</slotTime>
+        <emergencySlot>com.rupeek.customer.debug:id/raise_special_request_text</emergencySlot>
+        <confirmBookingButton>com.rupeek.customer.debug:id/flConfirmBooking</confirmBookingButton>
+        <confirmDetailsButton>com.rupeek.customer.debug:id/confirm_details</confirmDetailsButton>
+        <confirmMessage>android.widget.TextView</confirmMessage>
+        <appointmentCard>Appointment Booked We've received your request and will connect with you shortly!</appointmentCard>
+        <changeAppointment>com.rupeek.customer.debug:id/action_change_appointment</changeAppointment>
+        <rescheduleAppointment>com.rupeek.customer.debug:id/reschedule_appointment</rescheduleAppointment>
+        <reason>android.widget.RadioButton</reason>
+        <done>com.rupeek.customer.debug:id/action_done</done>
+        <rescheduleConfirm>//android.widget.TextView[@text="Reschedule Successful"]</rescheduleConfirm>
+        <cancelAppointment>com.rupeek.customer.debug:id/cancel_appointment</cancelAppointment>
+        <cancelYes>com.rupeek.customer.debug:id/action_yes</cancelYes>
+        <cancelReason>com.rupeek.customer.debug:id/reason_category</cancelReason>
+        <cancelConfirm>//android.widget.TextView[@text="Appointment Cancelled"]</cancelConfirm>
+        <navigateUp>android.widget.ImageButton</navigateUp>
+        <closePIP>//android.widget.Button[@index='10']</closePIP>
+        <rupeekGoldCard>/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[7]</rupeekGoldCard>
+        <applyGoldCard>com.rupeek.customer.debug:id/action_apply</applyGoldCard>
+        <continueGoldLoan>//android.widget.Button[@text="Continue"]</continueGoldLoan>
+        <editText>android.widget.EditText</editText>
+        <scheduleAppointment>//android.widget.Button[@text='Schedule Appointment']</scheduleAppointment>
+        <searchLocationWeb>//android.widget.Button[@text='alternate image Search Location']</searchLocationWeb>
+        <popUpBlackCross>//android.widget.Image[@text='black_cross']</popUpBlackCross>
+        <pacInput>pac-input</pacInput>
+        <Bengaluru>//android.view.View[@text='Bengaluru, Karnataka 560001, India']</Bengaluru>
+        <confirmProceed>android.widget.Button</confirmProceed>
+        <addressWeb>//android.widget.EditText[@resource-id='address']</addressWeb>
+        <landmarkWeb>//android.widget.EditText[@resource-id='landmark']</landmarkWeb>
+        <mobile>//android.widget.EditText[@resource-id='mobile']</mobile>
+        <tomorrow>//android.view.View[@text='Tomorrow']</tomorrow>
+        <morningSlot>//android.view.View[@text='9:15'] | //android.view.View[@text='9:45'] | //android.view.View[@text='11:45'] | //android.view.View[@text='12:00'] | //android.view.View[@text='1:45'] | //android.view.View[@text='1:15'] | //android.view.View[@text='3:00'] </morningSlot>
+        <goldCardConfirm>//android.view.View[@text='Your Credit Card Request has been received']</goldCardConfirm>
+        <doorStepWebView>//android.view.View[@text='Doorstep']</doorStepWebView>
+        <bankBranchWebView>//android.view.View[@text='Bank BranchLowest interest']</bankBranchWebView>
+        <loanrequestConfirm>//android.view.View[@text='Your Loan Request has been received']</loanrequestConfirm>
+        <goldLoanOnly>(//android.widget.Button[@text='Apply Now alternate image'])[2]</goldLoanOnly>
+    </customerApp>
+
+
+</pages>

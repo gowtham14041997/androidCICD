@@ -1,0 +1,92 @@
+{
+  "qa": true,
+  "loanType": "1:1",
+  "accountServiceInstance":"qa-red",
+  "mis": true,
+  "cityid": 1,
+  "lender": "fed",
+  "requester": "658143ea499e995a2af63119",
+  "loanof": 7054,
+  "loanstartedon": "2023-10-21",
+  "schemeForPayments": 19.76,
+  "ltvPayments": 68,
+  "dayselapsed": null,
+  "requestedamount": null,
+  "interest": 2000,
+  "jewel": [
+    {
+      "purity": "",
+      "ornamenttype": "",
+      "jewelworth": "",
+      "pledgedin": ""
+    },
+    {
+      "purity": "",
+      "ornamenttype": "",
+      "jewelworth": "",
+      "pledgedin": ""
+    },
+    {
+      "purity": "",
+      "ornamenttype": "",
+      "jewelworth": "",
+      "pledgedin": ""
+    },
+    {
+      "purity": "",
+      "ornamenttype": "",
+      "jewelworth": "",
+      "pledgedin": ""
+    },
+    {
+      "purity": "",
+      "ornamenttype": "",
+      "jewelworth": "",
+      "pledgedin": ""
+    }
+  ],
+  "appraisaleligiblewt": 100,
+  "loans": [
+    {
+      "amount": 70000,
+      "schemeid": 6673,
+      "jewels": "",
+      "loanid": "",
+      "interestrate": 19,
+      "lploanid": "",
+      "baseschemeid": "7NMFOF47",
+      "masterschemeid": "UTUV0FIH",
+      "disbursalamount": 99000,
+      "charges": [
+        {
+          "chargeId": "5f6ae7ba58d0721e274b7a23",
+          "chargeName": "Processing Fee",
+          "chargeType": "processing-fee",
+          "grossAmount": 1080,
+          "chargeAmount": 900,
+          "taxAmount": 100,
+          "taxComponents": [
+            {
+              "displayName": "CGST",
+              "taxCode": "cgst",
+              "taxValue": 8,
+              "amount": 80
+            },
+            {
+              "displayName": "IGST",
+              "taxCode": "igst",
+              "taxValue": 8,
+              "amount": 80
+            },
+            {
+              "displayName": "SGST",
+              "taxCode": "sgst",
+              "taxValue": 2,
+              "amount": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

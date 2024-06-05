@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="10" configfailurepolicy="skip">
+
+    <listeners>
+        <listener class-name="listener.APITestListener"/>
+<!--        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />-->
+    </listeners>
+
+    <test thread-count="1" name="Test">
+        <classes>
+            <class name="com.rupeek.web.runner.TestRunner"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

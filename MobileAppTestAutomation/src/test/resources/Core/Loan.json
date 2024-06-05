@@ -1,0 +1,27 @@
+{
+  "phone":"{{phone}}",
+  "category":"education",
+  "requestedamount":200000,
+  "notes":"fed fresh loan qa",
+  "loanapplicationid": "690",
+  "address": "53, 3rd cross, Cotton world, Opp. Salarpuria Apartments, HSR layout, 560068",
+  "locality": "HSR Layout",
+  "location": {
+    "x": 12.9060476,
+    "y": 77.6321972
+  },
+  "appusage":true,
+  "city":"bangalore",
+  "isscheduled":true,
+  "lpid":"5b5b1f808ca5d06304f47cde",
+  "branchid":"5c494582eb6b2bb14518f7ec",
+  "schemeid": 200,
+  "addressparts":{
+    "floor": "",
+    "house": ""
+  },
+  "locationsource":"reaper",
+  "cityid":1,
+  "tranxmode": "cash",
+  "masterschemeid":"F524TK5O"
+}

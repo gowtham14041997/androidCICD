@@ -1,0 +1,33 @@
+{
+  "approve": true,
+  "data": {
+    "userid": "{{userId}}",
+    "customerproofname": "Kumari Rojalin Das",
+    "gender": "female",
+    "salutation": "Ms.",
+    "fathername": "Father",
+    "permanentaddress": "dhnd,\ndnsbcx,\nbnxc,\nKARNATAKA,\n560078,\nBangalore",
+    "religion": "hindu",
+    "occupation": "salaried",
+    "addressparts": {
+      "houseno": "dhnd",
+      "street": "dnsbcx",
+      "city": "Bangalore",
+      "locality": "bnxc",
+      "state": "KARNATAKA",
+      "pin": "560078"
+    },
+    "qualification": "matriculate",
+    "maritalstatus": "single",
+    "requestid": "{{requestId}}",
+    "dob": "{{dob}}",
+    "ismaritalstatus": "single",
+    "isqualification": "matriculate",
+    "monthlyincome": null,
+    "mothername": "Mother",
+    "formatdob": "{{formatDob}}",
+    "secondaryaddressparts": {},
+    "annualincome": "550000",
+    "agentid": "{{agentId}}"
+  }
+}
