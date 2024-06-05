@@ -52,3 +52,9 @@ jobs:
         run: |
           chmod +x ./start_emu_headless.sh
           EMULATOR_TIMEOUT=$EMULATOR_TIMEOUT EMULATOR_NAME=$EMULATOR_NAME ./start_emu_headless.sh
+
+      - name: Install APK
+        run: |
+          adb devices
+          adb connect 127.0.0.1:5555
+          adb -s 127.0.0.1:5555 install CustomerApp-staging-11.7.6.apk
