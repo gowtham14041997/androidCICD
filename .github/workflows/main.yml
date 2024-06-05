@@ -65,6 +65,7 @@ jobs:
           
       - name: Run test cases
         run: |
+          npm install -g appium@2.5.1
           ls -lrth ~/.m2/repository
           cd MobileAppTestAutomation
           mvn clean install
