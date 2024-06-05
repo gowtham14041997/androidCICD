@@ -56,4 +56,9 @@ jobs:
         run: |
           adb connect 127.0.0.1:5555
           adb devices
-          adb -s 127.0.0.1:5555 install CustomerApp-staging-11.7.6.apk
+          adb -s emulator-5554 install CustomerApp-staging-11.7.6.apk
+
+      - name: Run test cases
+        run: |
+          cd MobileAppTestAutomation
+          mvn clean install          
