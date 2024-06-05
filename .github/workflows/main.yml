@@ -58,4 +58,5 @@ jobs:
           adb devices
           adb connect 127.0.0.1:5555
           adb devices
+          ls -lrth
           adb -s 127.0.0.1:5555 install CustomerApp-staging-11.7.6.apk
