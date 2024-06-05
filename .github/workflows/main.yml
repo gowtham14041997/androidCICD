@@ -22,7 +22,7 @@ jobs:
         name: cp apk
         with:
           command: cp
-          source: rpk-mobileapp-apk/CustomerApp-staging-11.7.6.apk
+          source: s3://rpk-mobileapp-apk/CustomerApp-staging-11.7.6.apk
           destination: ./data/CustomerApp-staging-11.7.6.apk
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
