@@ -60,6 +60,4 @@ jobs:
 
       - name: Run test cases
         run: |
-          cp -r rupeek ~/.m2/repository/
-          cd MobileAppTestAutomation
-          mvn clean install          
+          ls ~/.m2
