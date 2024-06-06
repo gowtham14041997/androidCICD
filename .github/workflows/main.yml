@@ -85,7 +85,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
           
-      - name: Copy mobileapptest output to S3 bucket
+      - name: Upload mobileapptest output to S3 bucket
         run: |
           cd MobileAppTestAutomation
           line_number=$(grep -n "Results :" mobileapptest_$(date +%d%m%Y).log | head -n 1 | cut -d: -f1)
