@@ -35,7 +35,7 @@ public class CustomerApp extends BasePage{
     public void selectDesiredEnv(String env) throws Throwable{
         wait.implicitlyWait(10,driver);
         try{
-            driver.findElement(By.id("android:id/button1")).click();
+            driver.findElement(By.id("android:id/button2")).click();
         }catch (Exception e){
             logger.info("Popup box not displayed");
         }
