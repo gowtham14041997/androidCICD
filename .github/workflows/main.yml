@@ -9,7 +9,7 @@ env:
   ANDROID_BUILD_TOOLS_VERSION: 31.0.0
   ANDROID_SDK_PACKAGES: system-images;android-31;google_apis_playstore;x86_64 platforms;android-31 build-tools;31.0.0 platform-tools emulator
   EMULATOR_TIMEOUT: 350
-  EMULATOR_NAME: Pixel_6_API_31
+  EMULATOR_NAME: nexus
 
 jobs:
   playwright-emulator:
