@@ -18,6 +18,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Send email with test results
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          subject: "Test results for MobileApp"
+          from: Test Suite
+          body: |
+            Hi,
+            The test results for MobileApp
+            Regards,
+            GitHub Actions
+          to: gowthama.rajan.cn@rupeek.com
+          
       - uses: keithweaver/aws-s3-github-action@v1.0.0
         name: cp apk
         with:
