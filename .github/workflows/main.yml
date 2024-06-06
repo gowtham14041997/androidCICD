@@ -88,4 +88,6 @@ jobs:
       - name: Copy mobileapptest output to S3 bucket
         run: |
           cd MobileAppTestAutomation
-          aws s3 cp . s3://rpk-mobileapp-apk/logs --recursive --exclude "*" --include "*.log"
+          line_number=$(grep -n "Results :" mobileapptest_$(date +%d%m%Y).log | head -n 1 | cut -d: -f1)
+          tail -n +$line_number mobileapptest_$(date +%d%m%Y).log > mobileapptest_$(date +%d%m%Y)_result.log
+          aws s3 cp . s3://rpk-mobileapp-apk/logs --recursive --exclude "*" --include "*result.log"
