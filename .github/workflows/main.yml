@@ -12,28 +12,15 @@ env:
   EMULATOR_NAME: nexus
 
 jobs:
-  playwright-emulator:
-    timeout-minutes: 20
+  android-emulator:
+    timeout-minutes: 180
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Send email with test results
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          subject: "Test results for MobileApp"
-          from: Test Suite
-          body: |
-            Hi,
-            The test results for MobileApp
-            Regards,
-            GitHub Actions
-          to: gowthama.rajan.cn@rupeek.com
+      - name: Checkout stage
+        uses: actions/checkout@v3
           
-      - uses: keithweaver/aws-s3-github-action@v1.0.0
-        name: cp apk
+      - name: Copy APK from S3 bucket
+        uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
           command: cp
           source: s3://rpk-mobileapp-apk/CustomerApp-staging-11.8.34.apk
@@ -46,12 +33,12 @@ jobs:
         run: |
             echo "$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/${{ env.ANDROID_BUILD_TOOLS_VERSION }}" >> $GITHUB_PATH
 
-      - name: Install Sdk
+      - name: Install SDK
         run: |
            yes Y | sdkmanager --licenses
            sdkmanager --install ${ANDROID_SDK_PACKAGES}
            
-      - name: Enable KVM group perms
+      - name: Enable KVM virtualization
         run: |
             echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
             sudo udevadm control --reload-rules
@@ -66,18 +53,17 @@ jobs:
           chmod +x ./start_emu_headless.sh
           EMULATOR_TIMEOUT=$EMULATOR_TIMEOUT EMULATOR_NAME=$EMULATOR_NAME ./start_emu_headless.sh
 
-      - name: Install APK
+      - name: Install APK on emulator
         run: |
-          adb connect 127.0.0.1:5555
           adb devices
           adb -s emulator-5554 install CustomerApp-staging-11.8.34.apk
 
-      - name: Create Maven Repository
+      - name: Copy Rupeek maven repository
         run: |
           mkdir -p ~/.m2/repository
           cp -r rupeek ~/.m2/repository/
           
-      - name: Run test cases
+      - name: Install appium, uiautomator2, chromedriver
         run: |
           npm install -g appium@2.5.1
           appium driver install uiautomator2
@@ -86,6 +72,8 @@ jobs:
           sudo mv chromedriver /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101
           sudo chown runner:runner /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101
           sudo chmod +x /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101         
-          ls -lrth ~/.m2/repository
+
+      - name: Run test cases
+        run: |
           cd MobileAppTestAutomation
           mvn clean install
