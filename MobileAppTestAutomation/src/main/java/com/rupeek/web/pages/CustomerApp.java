@@ -40,7 +40,7 @@ public class CustomerApp extends BasePage{
             logger.info("Popup box not displayed");
         }
         findElement(Locator.getLocatorFromXML("customerApp", LocatorType.ID, "envSelectDropDown")).click();
-        for (int i=1; i<10; i++){
+        for (int i=1; i<=10; i++){
             MobileElement x = (MobileElement) driver.findElementByXPath(Locator.getLocatorFromXML("customerApp", LocatorType.XPATH, "envDropDownList").getLocatorValue()+"["+i+"]");
             if (x.getText().equals(env)){
                 x.click();
