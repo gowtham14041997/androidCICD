@@ -74,17 +74,4 @@ jobs:
           sudo chmod +x /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101         
           ls -lrth ~/.m2/repository
           cd MobileAppTestAutomation
-
-      - name: Send email with Test Results
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          subject: "MobileApp Test Results"
-          from: Test Suite
-          body: |
-            Hi,
-            Please find the test results
-            Regards,
-            GitHub Actions
-          to: gowthama.rajan.cn@rupeek.com
+          mvn clean install
