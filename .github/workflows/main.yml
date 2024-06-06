@@ -19,7 +19,7 @@ jobs:
       - name: Checkout stage
         uses: actions/checkout@v3
 
-      - name: Copy APK from S3 bucket
+      - name: Download APK from S3 bucket
         uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
           command: cp
@@ -33,7 +33,7 @@ jobs:
         run: |
             echo "$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/${{ env.ANDROID_BUILD_TOOLS_VERSION }}" >> $GITHUB_PATH
 
-      - name: Install SDK
+      - name: Install sdkmanager
         run: |
            yes Y | sdkmanager --licenses
            sdkmanager --install ${ANDROID_SDK_PACKAGES}
