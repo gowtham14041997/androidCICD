@@ -76,7 +76,7 @@ jobs:
       - name: Run test cases
         run: |
           cd MobileAppTestAutomation
-          mvn clean install 2>&1 | tee "mobileapptest_$(date +%d%m%Y).log" 2>&1
+          touch mobileapptest_06062024.log" 2>&1
           ls -lrth
           pwd
           
@@ -84,8 +84,9 @@ jobs:
         uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
           command: cp
-          source: ./mobileapptest_$(date +%d%m%Y).log
-          destination: s3://rpk-mobileapp-apk/logs/mobileapptest_$(date +%d%m%Y).log
+          source: ./
+          destination: s3://rpk-mobileapp-apk/logs/
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: ap-south-1          
+          aws_region: ap-south-1
+          flags: --recursive --exclude "*" --include "*.log"
