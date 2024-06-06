@@ -27,14 +27,6 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ap-south-1
-
-      - name: Install ChromeDriver
-        run: |
-          wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/bin/chromedriver
-          sudo chown root:root /usr/bin/chromedriver
-          sudo chmod +x /usr/bin/chromedriver
           
       - name: Add avdmanager and sdkmanager to system PATH
         run: |
@@ -75,6 +67,11 @@ jobs:
         run: |
           npm install -g appium@2.5.1
           appium driver install uiautomator2
+          wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101
+          sudo chown runner:runner /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101
+          sudo chmod +x /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101         
           ls -lrth ~/.m2/repository
           cd MobileAppTestAutomation
           mvn clean install
