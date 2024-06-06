@@ -61,7 +61,7 @@ jobs:
       - name: Copy Rupeek maven repository
         run: |
           mkdir -p ~/.m2/repository
-          cp -r rupeek ~/.m2/repository/
+          cp -r maven/rupeek ~/.m2/repository/
           
       - name: Install appium, uiautomator2, chromedriver
         run: |
