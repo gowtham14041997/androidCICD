@@ -76,4 +76,14 @@ jobs:
       - name: Run test cases
         run: |
           cd MobileAppTestAutomation
-          mvn clean install
+          mvn clean install > "mobileapptest_$(date +%d%m%Y).log" 2>&1
+
+      - name: Copy mobileapptest output to S3 bucket
+        uses: keithweaver/aws-s3-github-action@v1.0.0
+        with:
+          command: cp
+          source: ./*.log
+          destination: s3://rpk-mobileapp-apk/logs/
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ap-south-1          
