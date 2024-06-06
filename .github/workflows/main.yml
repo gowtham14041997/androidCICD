@@ -76,7 +76,7 @@ jobs:
       - name: Run test cases
         run: |
           cd MobileAppTestAutomation
-          mvn clean install > "mobileapptest_$(date +%d%m%Y).log" 2>&1
+          mvn clean install 2>&1 | tee "mobileapptest_$(date +%d%m%Y).log" 2>&1
 
       - name: Copy mobileapptest output to S3 bucket
         uses: keithweaver/aws-s3-github-action@v1.0.0
