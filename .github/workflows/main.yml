@@ -51,8 +51,6 @@ jobs:
         run: |
           chmod +x ./start_emu_headless.sh
           EMULATOR_TIMEOUT=$EMULATOR_TIMEOUT EMULATOR_NAME=$EMULATOR_NAME ./start_emu_headless.sh
-          adb -s emulator-5554 shell wm size 1080x2400
-          adb -s emulator-5554 shell wm density 416
 
       - name: Install APK
         run: |
