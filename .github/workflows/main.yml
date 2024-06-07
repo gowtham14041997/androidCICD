@@ -28,8 +28,7 @@ jobs:
     - name: Start VPN Connection Manually
       shell: bash
       run: |
-        pritunl-client start ${{ steps.pritunl-connection.outputs.client-id }} \
-          --password ${{ secrets.PRITUNL_PROFILE_PIN || '' }}
+        pritunl-client start ${{ steps.pritunl-connection.outputs.client-id }}
         sleep 10
 
     - name: Show VPN Connection Status Manually
