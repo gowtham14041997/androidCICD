@@ -35,4 +35,10 @@ jobs:
       shell: bash
       run: |
         pritunl-client list -j | jq 'sort_by(.name) | .[0] | { "Profile Name": .name, "Client Address": .client_address }'
-        # Show the profile name and client address        
+
+    - name: Stop VPN Connection Manually
+      if: ${{ always() }}
+      shell: bash
+      run: |
+        pritunl-client stop ${{ steps.pritunl-connection.outputs.client-id }}
+        # Stop the VPN connection
