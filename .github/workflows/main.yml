@@ -16,78 +16,26 @@ jobs:
     timeout-minutes: 180
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout stage
-        uses: actions/checkout@v3
+    - name: Setup Pritunl Profile
+      id: pritunl-connection
+      uses: nathanielvarona/pritunl-client-github-action@v1
+      with:
+        profile-file: ${{ secrets.PRITUNL_PROFILE_FILE }}
+        profile-pin: ${{ secrets.PRITUNL_PROFILE_PIN }}
+        client-version: 1.3.3883.60
+        vpn-mode: ovpn
+        start-connection: false
 
-      - name: Download APK from S3 bucket
-        uses: keithweaver/aws-s3-github-action@v1.0.0
-        with:
-          command: cp
-          source: s3://rpk-mobileapp-apk/CustomerApp-staging-11.8.34.apk
-          destination: ./CustomerApp-staging-11.8.34.apk
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: ap-south-1
-          
-      - name: Add avdmanager and sdkmanager to system PATH
-        run: |
-            echo "$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/${{ env.ANDROID_BUILD_TOOLS_VERSION }}" >> $GITHUB_PATH
+    - name: Start VPN Connection Manually
+      shell: bash
+      run: |
+        pritunl-client start ${{ steps.pritunl-connection.outputs.client-id }} \
+          --password ${{ secrets.PRITUNL_PROFILE_PIN || '' }}
+        # Wait for 10 seconds to allow the connection to establish
+        sleep 10
 
-      - name: Install sdkmanager
-        run: |
-           yes Y | sdkmanager --licenses
-           sdkmanager --install ${ANDROID_SDK_PACKAGES}
-           
-      - name: Enable KVM virtualization
-        run: |
-            echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-            sudo udevadm control --reload-rules
-            sudo udevadm trigger --name-match=kvm
-            
-      - name: Build emulator
-        run: |
-            echo "no" | avdmanager --verbose create avd --force -n $EMULATOR_NAME --abi "${ANDROID_TARGET}/${ANDROID_ARCH}" -k "system-images;android-${API_LEVEL};${ANDROID_TARGET};${ANDROID_ARCH}"
-
-      - name: Launch emulator
-        run: |
-          chmod +x ./start_emu_headless.sh
-          EMULATOR_TIMEOUT=$EMULATOR_TIMEOUT EMULATOR_NAME=$EMULATOR_NAME ./start_emu_headless.sh
-
-      - name: Install APK on emulator
-        run: |
-          adb devices
-          adb -s emulator-5554 install CustomerApp-staging-11.8.34.apk
-
-      - name: Copy Rupeek maven repository
-        run: |
-          mkdir -p ~/.m2/repository
-          cp -r maven/rupeek ~/.m2/repository/
-          
-      - name: Install appium, uiautomator2, chromedriver
-        run: |
-          npm install -g appium@2.5.1
-          appium driver install uiautomator2
-          wget https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101
-          sudo chown runner:runner /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101
-          sudo chmod +x /home/runner/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-chromedriver/chromedriver/linux/chromedriver-linux64_v91.0.4472.101
-          
-      - name: Mobileapp test suite
-        run: |
-          cd MobileAppTestAutomation
-          mvn clean install 2>&1 | tee "mobileapptest_$(date +%d%m%Y).log" 2>&1
-          
-      - name: Setup AWS CLI
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1
-          
-      - name: Upload mobileapptest output to S3 bucket
-        run: |
-          cd MobileAppTestAutomation
-          line_number=$(grep -n "Results :" mobileapptest_$(date +%d%m%Y).log | head -n 1 | cut -d: -f1)
-          tail -n +$line_number mobileapptest_$(date +%d%m%Y).log > mobileapptest_$(date +%d%m%Y)_result.log
-          aws s3 cp . s3://rpk-mobileapp-apk/logs --recursive --exclude "*" --include "*result.log"
+    - name: Show VPN Connection Status Manually
+      shell: bash
+      run: |
+        pritunl-client list -j | jq 'sort_by(.name) | .[0] | { "Profile Name": .name, "Client Address": .client_address }'
+        # Show the profile name and client address        
