@@ -35,12 +35,12 @@ public class CustomerApp extends BasePage{
     public void selectDesiredEnv(String env) throws Throwable{
         wait.implicitlyWait(10,driver);
         try{
-            driver.findElement(By.id("android:id/button2")).click();
+            driver.findElement(By.id("android:id/button1")).click();
         }catch (Exception e){
             logger.info("Popup box not displayed");
         }
         findElement(Locator.getLocatorFromXML("customerApp", LocatorType.ID, "envSelectDropDown")).click();
-        for (int i=1; i<=10; i++){
+        for (int i=1; i<10; i++){
             MobileElement x = (MobileElement) driver.findElementByXPath(Locator.getLocatorFromXML("customerApp", LocatorType.XPATH, "envDropDownList").getLocatorValue()+"["+i+"]");
             if (x.getText().equals(env)){
                 x.click();
