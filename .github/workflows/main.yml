@@ -10,6 +10,8 @@ env:
   ANDROID_SDK_PACKAGES: system-images;android-31;google_apis_playstore;x86_64 platforms;android-31 build-tools;31.0.0 platform-tools emulator
   EMULATOR_TIMEOUT: 350
   EMULATOR_NAME: nexus
+  LOG_FILENAME: mobileapptest_$(date +%d%m%Y_%H%M%S_%Z).log
+  RESULT_FILENAME: mobileapptest_$(date +%d%m%Y_%H%M%S_%Z)_result.log
 
 jobs:
   android-emulator:
@@ -98,7 +100,7 @@ jobs:
     - name: Mobileapp Test Suite
       run: |
         cd MobileAppTestAutomation
-        mvn test 2>&1 | tee "mobileapptest_$(date +%d%m%Y_%H%M%S_%Z).log" 2>&1
+        mvn test 2>&1 | tee "${LOG_FILENAME}" 2>&1
 
     - name: Setup AWS CLI
       uses: aws-actions/configure-aws-credentials@v1
@@ -110,6 +112,6 @@ jobs:
     - name: Upload Mobileapptest Output to S3 Bucket
       run: |
         cd MobileAppTestAutomation
-        line_number=$(grep -n "Results :" mobileapptest_$(date +%d%m%Y_%H%M%S_%Z).log | head -n 1 | cut -d: -f1)
-        tail -n +$line_number mobileapptest_$(date +%d%m%Y_%H%M%S_%Z).log > mobileapptest_$(date +%d%m%Y_%H%M%S_%Z)_result.log
+        line_number=$(grep -n "Results :" "${LOG_FILENAME}" | head -n 1 | cut -d: -f1)
+        tail -n +$line_number "${LOG_FILENAME}" > "${RESULT_FILENAME}"
         aws s3 cp . s3://rpk-mobileapp-apk/logs --recursive --exclude "*" --include "*result.log"
