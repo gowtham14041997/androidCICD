@@ -63,7 +63,7 @@ public class CustomerAppCommonSteps extends BaseStep {
         customerApp = new CustomerApp(driver);
         common = new Common(driver);
         wait = new Waits(driver);
-        customerApp.selectDesiredEnv("PRODUCTION");
+        customerApp.selectDesiredEnv("QA");
         cucumberReporter.setTestStep(cucumberReporter.getScenario().createNode(new GherkinKeyword("Given"), "RupeekApp is opened"));
     }
 
