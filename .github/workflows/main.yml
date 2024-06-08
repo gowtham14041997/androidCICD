@@ -18,8 +18,6 @@ jobs:
     steps:
     - name: Checkout Stage
       uses: actions/checkout@v3
-      with:
-        ref: github-workflow
 
     - name: Download APK from S3 Bucket
       uses: keithweaver/aws-s3-github-action@v1.0.0
