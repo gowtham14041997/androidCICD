@@ -30,22 +30,6 @@ jobs:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws_region: ap-south-1
-
-    - name: Download and Install Maven Dependencies
-      run: |
-        mkdir -p ~/.m2/repository
-        cp -r maven/rupeek ~/.m2/repository/
-        cd MobileAppTestAutomation
-        mvn clean install -DskipTests
-
-    - name: Add avdmanager and sdkmanager to System PATH
-      run: |
-          echo "$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/${{ env.ANDROID_BUILD_TOOLS_VERSION }}" >> $GITHUB_PATH
-          
-    - name: Install sdkmanager
-      run: |
-         yes Y | sdkmanager --licenses
-         sdkmanager --install ${ANDROID_SDK_PACKAGES}
          
     - name: Setup Pritunl Profile
       id: pritunl-connection
@@ -67,6 +51,22 @@ jobs:
       run: |
         pritunl-client list -j | jq 'sort_by(.name) | .[0] | { "Profile Name": .name, "Client Address": .client_address }'
 
+    - name: Download and Install Maven Dependencies
+      run: |
+        mkdir -p ~/.m2/repository
+        cp -r maven/rupeek ~/.m2/repository/
+        cd MobileAppTestAutomation
+        mvn clean install -DskipTests
+
+    - name: Add avdmanager and sdkmanager to System PATH
+      run: |
+          echo "$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/${{ env.ANDROID_BUILD_TOOLS_VERSION }}" >> $GITHUB_PATH
+          
+    - name: Install sdkmanager
+      run: |
+         yes Y | sdkmanager --licenses
+         sdkmanager --install ${ANDROID_SDK_PACKAGES}
+         
     - name: Install appium, uiautomator2, chromedriver
       run: |
         npm install -g appium@2.5.1
