@@ -52,6 +52,11 @@ jobs:
       run: |
         mkdir -p ~/.m2/repository
         cp -r maven/rupeek ~/.m2/repository/
+
+    - name: Download and Install Maven Dependencies
+      run: |
+        cd MobileAppTestAutomation
+        mvn clean install -DskipTests
         
     - name: Enable KVM Virtualization
       run: |
@@ -96,7 +101,7 @@ jobs:
     - name: Mobileapp Test Suite
       run: |
         cd MobileAppTestAutomation
-        mvn clean install 2>&1 | tee "mobileapptest_$(date +%d%m%Y).log" 2>&1
+        mvn test 2>&1 | tee "mobileapptest_$(date +%d%m%Y).log" 2>&1
 
     - name: Stop VPN Connection Manually
       if: ${{ always() }}
