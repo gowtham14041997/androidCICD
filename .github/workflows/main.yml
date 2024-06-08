@@ -38,6 +38,11 @@ jobs:
         cd MobileAppTestAutomation
         mvn clean install -DskipTests
 
+    - name: Install sdkmanager
+      run: |
+         yes Y | sdkmanager --licenses
+         sdkmanager --install ${ANDROID_SDK_PACKAGES}
+         
     - name: Setup Pritunl Profile
       id: pritunl-connection
       uses: nathanielvarona/pritunl-client-github-action@v1
@@ -61,11 +66,6 @@ jobs:
     - name: Add avdmanager and sdkmanager to System PATH
       run: |
           echo "$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/${{ env.ANDROID_BUILD_TOOLS_VERSION }}" >> $GITHUB_PATH
-          
-    - name: Install sdkmanager
-      run: |
-         yes Y | sdkmanager --licenses
-         sdkmanager --install ${ANDROID_SDK_PACKAGES}
 
     - name: Install appium, uiautomator2, chromedriver
       run: |
